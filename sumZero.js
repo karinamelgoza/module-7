@@ -1,13 +1,17 @@
 function sumZero(arr) {
     let sum = 0
-    for (let i = 0; i < arr.length - 2; i++) {
+    let total = []
+    for (let i = 0; i < arr.length; i++) {
         for (let j = i + 1; j < arr.length; j++) {
             if (arr[i] + arr[j] === sum) {
-                console.log(arr[i], arr[j])
-                return true
+                total.push(sum)
             }
-
         }
+    }
+    if (total.includes(0)) {
+        return true
+    } else {
+        return false
     }
 }
 
