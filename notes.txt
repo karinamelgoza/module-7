@@ -1,0 +1,21 @@
+Results for the extraLargeArray
+insert 2.195295103 s
+append 5.010675 ms
+
+Results for the largeArray
+insert 14.168977 ms
+append 847.623 μs
+
+Results for the mediumArray
+insert 212.164 μs
+append 302.545 μs
+
+Results for the smallArray
+insert 67.964 μs
+append 150.885 μs
+
+Results for the tinyArray
+insert 56.206 μs
+append 135.063 μs
+
+The results show that the insert function ran faster with the mediumArray, smallArray, and tinyArray but the append function ran faster with the largeArray and extraLargeArray. This means that the append function scales better than the insert function. The append function has a time complexity of O(1), while the insert function has a time complexity of O(n). So while the insert function runs faster with smaller array samples its linear scale will mean that as the array sample size gets larger it will run slower than the constant scale of the append function. This is explained by the methods used. The insert fucntion uses the unshift method that adds to the beginning of an array requiring all values to shift indexes, while the push methos simply adds to the end of the array. 
